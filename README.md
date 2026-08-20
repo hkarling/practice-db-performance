@@ -61,7 +61,7 @@ docker exec -i practice-db-performance-postgres-1 psql -U practice -d practice_d
 ### Phase 2 — JPA/ORM 레벨 문제
 - [x] 5. N+1 문제 재현 — [LOG005](docs/LOG005-n-plus-1.md)
 - [x] 6. fetch join으로 해결 — [LOG006](docs/LOG006-fetch-join.md)
-- [ ] 7. batch size 설정과 fetch join 트레이드오프
+- [x] 7. batch size 설정과 fetch join 트레이드오프 — [LOG007](docs/LOG007-batch-size.md)
 - [ ] 8. QueryDSL로 동일 쿼리 작성
 
 ### Phase 3 — 복잡한 조회 최적화
