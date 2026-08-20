@@ -62,7 +62,7 @@ docker exec -i practice-db-performance-postgres-1 psql -U practice -d practice_d
 - [x] 5. N+1 문제 재현 — [LOG005](docs/LOG005-n-plus-1.md)
 - [x] 6. fetch join으로 해결 — [LOG006](docs/LOG006-fetch-join.md)
 - [x] 7. batch size 설정과 fetch join 트레이드오프 — [LOG007](docs/LOG007-batch-size.md)
-- [ ] 8. QueryDSL로 동일 쿼리 작성
+- [x] 8. QueryDSL로 동일 쿼리 작성 — [LOG008](docs/LOG008-querydsl.md)
 
 ### Phase 3 — 복잡한 조회 최적화
 - [ ] 9. 다중 조건 필터링 (상태 + 기간 + 카테고리)
