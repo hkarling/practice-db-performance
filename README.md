@@ -66,7 +66,7 @@ docker exec -i practice-db-performance-postgres-1 psql -U practice -d practice_d
 
 ### Phase 3 — 복잡한 조회 최적화
 - [x] 9. 다중 조건 필터링 (상태 + 기간 + 카테고리) — [LOG009](docs/LOG009-multi-condition-filter.md)
-- [ ] 10. 커버링 인덱스
+- [x] 10. 커버링 인덱스 — [LOG010](docs/LOG010-covering-index.md)
 - [ ] 11. 대용량 페이지네이션 — offset 한계, cursor 전환
 - [ ] 12. 집계 쿼리 최적화
 

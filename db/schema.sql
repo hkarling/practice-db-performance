@@ -102,7 +102,7 @@ CREATE TABLE delivery
 -- ========== indexes ==========
 CREATE INDEX idx_orders_customer_id ON orders (customer_id);
 CREATE INDEX idx_orders_status_ordered_at ON orders (status, ordered_at DESC);
-CREATE INDEX idx_order_items_product_id ON order_items (product_id);
+CREATE INDEX idx_order_items_product_id_covering ON order_items (product_id) INCLUDE (order_id);
 
 -- ========== updated_at 자동 갱신 트리거 ==========
 CREATE OR REPLACE FUNCTION set_updated_at()
