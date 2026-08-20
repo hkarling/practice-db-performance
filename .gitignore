@@ -35,3 +35,8 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### seed (Python) ###
+seed/.venv/
+seed/output/
+seed/__pycache__/

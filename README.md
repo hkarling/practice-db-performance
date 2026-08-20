@@ -50,7 +50,7 @@ docker exec -i practice-db-performance-postgres-1 psql -U practice -d practice_d
 
 - [x] Step 0. 프로젝트 셋업 (패키지 구조 / build.gradle / docker compose) — [LOG000](docs/LOG000-project-setup.md)
 - [x] Step 0-1. 엔티티 및 스키마 DDL 설계 — [LOG001](docs/LOG001-entity-schema.md)
-- [ ] Step 0-2. 시드 데이터 생성기 (`seed/`)
+- [x] Step 0-2. 시드 데이터 생성기 (`seed/`) — [LOG002](docs/LOG002-seed-data.md)
 
 ### Phase 1 — 실행 계획 읽기
 - [ ] 1. EXPLAIN ANALYZE 기본 — Seq Scan vs Index Scan

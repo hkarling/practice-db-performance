@@ -1,0 +1,2 @@
+Faker>=30
+psycopg2-binary>=2.9
