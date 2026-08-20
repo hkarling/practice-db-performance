@@ -10,4 +10,5 @@ public interface OrderQueryRepository {
 
   List<Order> search(OrderSearchCondition condition, Pageable pageable);
 
+  List<Order> findNextPage(Long cursorId, int size);
 }

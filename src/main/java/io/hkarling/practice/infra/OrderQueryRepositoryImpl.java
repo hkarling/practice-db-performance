@@ -47,6 +47,17 @@ public class OrderQueryRepositoryImpl implements OrderQueryRepository {
         .fetch();
   }
 
+  @Override
+  public List<Order> findNextPage(Long cursorId, int size) {
+    return queryFactory
+        .selectFrom(order)
+        .join(order.customer, customer).fetchJoin()
+        .where(cursorId != null ? order.id.lt(cursorId) : null)
+        .orderBy(order.id.desc())
+        .limit(size)
+        .fetch();
+  }
+
   private BooleanExpression statusEq(OrderStatus status) {
     return status != null ? order.status.eq(status) : null;
   }
