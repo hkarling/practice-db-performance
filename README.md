@@ -42,14 +42,14 @@ io.hkarling.practice
 # 1. 로컬 Postgres 기동 (Docker Desktop 필요)
 ./gradlew bootRun   # spring-boot-docker-compose가 compose.yaml을 자동 기동
 
-# 2. 스키마 적용 (최초 1회)
-psql -h localhost -p 5432 -U practice -d practice_db_performance -f db/schema.sql
+# 2. 스키마 적용 (최초 1회, 로컬에 psql이 없다면 컨테이너 내부 psql 이용)
+docker exec -i practice-db-performance-postgres-1 psql -U practice -d practice_db_performance < db/schema.sql
 ```
 
 ## 진행 상태
 
 - [x] Step 0. 프로젝트 셋업 (패키지 구조 / build.gradle / docker compose) — [LOG000](docs/LOG000-project-setup.md)
-- [ ] Step 0-1. 엔티티 및 스키마 DDL 설계
+- [x] Step 0-1. 엔티티 및 스키마 DDL 설계 — [LOG001](docs/LOG001-entity-schema.md)
 - [ ] Step 0-2. 시드 데이터 생성기 (`seed/`)
 
 ### Phase 1 — 실행 계획 읽기
