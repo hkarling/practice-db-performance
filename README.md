@@ -53,9 +53,9 @@ docker exec -i practice-db-performance-postgres-1 psql -U practice -d practice_d
 - [x] Step 0-2. 시드 데이터 생성기 (`seed/`) — [LOG002](docs/LOG002-seed-data.md)
 
 ### Phase 1 — 실행 계획 읽기
-- [ ] 1. EXPLAIN ANALYZE 기본 — Seq Scan vs Index Scan
-- [ ] 2. 인덱스 없는 상태에서 슬로우 쿼리 재현
-- [ ] 3. 단일 컬럼 인덱스 추가 후 비교
+- [x] 1. EXPLAIN ANALYZE 기본 — Seq Scan vs Index Scan
+- [x] 2. 인덱스 없는 상태에서 슬로우 쿼리 재현
+- [x] 3. 단일 컬럼 인덱스 추가 후 비교 — [LOG003](docs/LOG003-explain-analyze-index.md)
 - [ ] 4. 복합 인덱스 설계 — 컬럼 순서
 
 ### Phase 2 — JPA/ORM 레벨 문제

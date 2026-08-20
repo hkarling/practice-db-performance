@@ -98,22 +98,61 @@ CREATE TABLE delivery
     created_at            TIMESTAMPTZ NOT NULL DEFAULT now(),
     updated_at            TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+-- ========== indexes ==========
+CREATE INDEX idx_orders_customer_id ON orders (customer_id);
 
 -- ========== updated_at 자동 갱신 트리거 ==========
 CREATE OR REPLACE FUNCTION set_updated_at()
-  RETURNS TRIGGER AS $$
+    RETURNS TRIGGER AS
+$$
 BEGIN
-      NEW.updated_at = now();
-RETURN NEW;
+    NEW.updated_at = now();
+    RETURN NEW;
 END;
-  $$ LANGUAGE plpgsql;
+$$ LANGUAGE plpgsql;
 
-CREATE TRIGGER trg_customers_updated_at      BEFORE UPDATE ON customers      FOR EACH ROW EXECUTE FUNCTION set_updated_at();
-CREATE TRIGGER trg_sellers_updated_at        BEFORE UPDATE ON sellers        FOR EACH ROW EXECUTE FUNCTION set_updated_at();
-CREATE TRIGGER trg_categories_updated_at     BEFORE UPDATE ON categories     FOR EACH ROW EXECUTE FUNCTION set_updated_at();
-CREATE TRIGGER trg_products_updated_at       BEFORE UPDATE ON products       FOR EACH ROW EXECUTE FUNCTION set_updated_at();
-CREATE TRIGGER trg_orders_updated_at         BEFORE UPDATE ON orders         FOR EACH ROW EXECUTE FUNCTION set_updated_at();
-CREATE TRIGGER trg_order_items_updated_at    BEFORE UPDATE ON order_items    FOR EACH ROW EXECUTE FUNCTION set_updated_at();
-CREATE TRIGGER trg_order_payments_updated_at BEFORE UPDATE ON order_payments FOR EACH ROW EXECUTE FUNCTION set_updated_at();
-CREATE TRIGGER trg_order_reviews_updated_at  BEFORE UPDATE ON order_reviews  FOR EACH ROW EXECUTE FUNCTION set_updated_at();
-CREATE TRIGGER trg_delivery_updated_at       BEFORE UPDATE ON delivery       FOR EACH ROW EXECUTE FUNCTION set_updated_at();
+CREATE TRIGGER trg_customers_updated_at
+    BEFORE UPDATE
+    ON customers
+    FOR EACH ROW
+EXECUTE FUNCTION set_updated_at();
+CREATE TRIGGER trg_sellers_updated_at
+    BEFORE UPDATE
+    ON sellers
+    FOR EACH ROW
+EXECUTE FUNCTION set_updated_at();
+CREATE TRIGGER trg_categories_updated_at
+    BEFORE UPDATE
+    ON categories
+    FOR EACH ROW
+EXECUTE FUNCTION set_updated_at();
+CREATE TRIGGER trg_products_updated_at
+    BEFORE UPDATE
+    ON products
+    FOR EACH ROW
+EXECUTE FUNCTION set_updated_at();
+CREATE TRIGGER trg_orders_updated_at
+    BEFORE UPDATE
+    ON orders
+    FOR EACH ROW
+EXECUTE FUNCTION set_updated_at();
+CREATE TRIGGER trg_order_items_updated_at
+    BEFORE UPDATE
+    ON order_items
+    FOR EACH ROW
+EXECUTE FUNCTION set_updated_at();
+CREATE TRIGGER trg_order_payments_updated_at
+    BEFORE UPDATE
+    ON order_payments
+    FOR EACH ROW
+EXECUTE FUNCTION set_updated_at();
+CREATE TRIGGER trg_order_reviews_updated_at
+    BEFORE UPDATE
+    ON order_reviews
+    FOR EACH ROW
+EXECUTE FUNCTION set_updated_at();
+CREATE TRIGGER trg_delivery_updated_at
+    BEFORE UPDATE
+    ON delivery
+    FOR EACH ROW
+EXECUTE FUNCTION set_updated_at();
