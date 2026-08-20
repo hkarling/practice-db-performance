@@ -8,4 +8,6 @@ public interface OrderQueryRepository {
 
   List<Order> findAllWithCustomerQuerydsl(Pageable pageable);
 
+  List<Order> search(OrderSearchCondition condition, Pageable pageable);
+
 }

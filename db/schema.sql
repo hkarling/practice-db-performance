@@ -98,9 +98,11 @@ CREATE TABLE delivery
     created_at            TIMESTAMPTZ NOT NULL DEFAULT now(),
     updated_at            TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+
 -- ========== indexes ==========
 CREATE INDEX idx_orders_customer_id ON orders (customer_id);
 CREATE INDEX idx_orders_status_ordered_at ON orders (status, ordered_at DESC);
+CREATE INDEX idx_order_items_product_id ON order_items (product_id);
 
 -- ========== updated_at 자동 갱신 트리거 ==========
 CREATE OR REPLACE FUNCTION set_updated_at()
