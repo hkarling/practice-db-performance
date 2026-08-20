@@ -100,6 +100,7 @@ CREATE TABLE delivery
 );
 -- ========== indexes ==========
 CREATE INDEX idx_orders_customer_id ON orders (customer_id);
+CREATE INDEX idx_orders_status_ordered_at ON orders (status, ordered_at DESC);
 
 -- ========== updated_at 자동 갱신 트리거 ==========
 CREATE OR REPLACE FUNCTION set_updated_at()

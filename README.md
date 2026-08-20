@@ -56,7 +56,7 @@ docker exec -i practice-db-performance-postgres-1 psql -U practice -d practice_d
 - [x] 1. EXPLAIN ANALYZE 기본 — Seq Scan vs Index Scan
 - [x] 2. 인덱스 없는 상태에서 슬로우 쿼리 재현
 - [x] 3. 단일 컬럼 인덱스 추가 후 비교 — [LOG003](docs/LOG003-explain-analyze-index.md)
-- [ ] 4. 복합 인덱스 설계 — 컬럼 순서
+- [x] 4. 복합 인덱스 설계 — 컬럼 순서 — [LOG004](docs/LOG004-composite-index.md)
 
 ### Phase 2 — JPA/ORM 레벨 문제
 - [ ] 5. N+1 문제 재현
