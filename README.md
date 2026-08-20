@@ -59,7 +59,7 @@ docker exec -i practice-db-performance-postgres-1 psql -U practice -d practice_d
 - [x] 4. 복합 인덱스 설계 — 컬럼 순서 — [LOG004](docs/LOG004-composite-index.md)
 
 ### Phase 2 — JPA/ORM 레벨 문제
-- [ ] 5. N+1 문제 재현
+- [x] 5. N+1 문제 재현 — [LOG005](docs/LOG005-n-plus-1.md)
 - [ ] 6. fetch join으로 해결
 - [ ] 7. batch size 설정과 fetch join 트레이드오프
 - [ ] 8. QueryDSL로 동일 쿼리 작성
