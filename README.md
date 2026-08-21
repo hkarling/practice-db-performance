@@ -71,7 +71,7 @@ docker exec -i practice-db-performance-postgres-1 psql -U practice -d practice_d
 - [x] 12. 집계 쿼리 최적화 — [LOG012](docs/LOG012-aggregate-query.md)
 
 ### Phase 4 — 운영 관점
-- [ ] 13. 슬로우 쿼리 로그 설정 및 분석
+- [x] 13. 슬로우 쿼리 로그 설정 및 분석 — [LOG013](docs/LOG013-slow-query-log.md)
 - [ ] 14. 인덱스가 write 성능에 미치는 영향
 - [ ] 15. VACUUM, ANALYZE
 - [ ] 16. 파티셔닝 (orders, 날짜 기준)
