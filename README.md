@@ -74,7 +74,7 @@ docker exec -i practice-db-performance-postgres-1 psql -U practice -d practice_d
 - [x] 13. 슬로우 쿼리 로그 설정 및 분석 — [LOG013](docs/LOG013-slow-query-log.md)
 - [x] 14. 인덱스가 write 성능에 미치는 영향 — [LOG014](docs/LOG014-index-write-cost.md)
 - [x] 15. VACUUM, ANALYZE — [LOG015](docs/LOG015-vacuum-analyze.md)
-- [ ] 16. 파티셔닝 (orders, 날짜 기준)
+- [x] 16. 파티셔닝 (orders, 날짜 기준) — [LOG016](docs/LOG016-partitioning.md)
 
 ## 문서
 
